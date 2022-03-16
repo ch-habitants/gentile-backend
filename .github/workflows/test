@@ -1,0 +1,22 @@
+name: Test
+
+on: [pull_request]
+
+jobs:
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt requirments-dev.txt
+
+      - name: Run lint
+        run: flake8 gentile --count --show-source --statistics
+
+      - name: Test types
+        run: mypy gentile --strict --non-interactive --pretty
+
+      - name: Execute tests
+        run: echo nothing yet
