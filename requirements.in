@@ -1,2 +1,4 @@
 django
+djangorestframework
+djangorestframework-stubs
 django-stubs
