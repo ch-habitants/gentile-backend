@@ -12,3 +12,4 @@ class CommuneSerializer(serializers.ModelSerializer[Commune]):
     class Meta:
         model = Commune
         fields = ['name_fr', 'canton', 'gentile_fr']
+        depth = 1

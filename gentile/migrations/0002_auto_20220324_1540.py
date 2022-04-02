@@ -41,12 +41,12 @@ def seed_from_data(apps, schema_editor):
     with open('gentile.csv', 'r') as input:
         for line in input.readlines():
             canton_str, commune_str, gentile_str = line.split(';')
+            gentile_str = gentile_str[:-1]  # Remove trailing '\n'
 
             commune = Commune(
                 name_fr=commune_str,
                 gentile_fr=gentile_str
             )
-            print("looking for canton ", canton_str)
             commune.canton = Canton.objects.get(name_fr=canton_str)
             commune.save()
 
