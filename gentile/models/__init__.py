@@ -1,2 +1,2 @@
-from .canton import Canton
-from .commune import Commune
+from .canton import Canton as Canton
+from .commune import Commune as Commune
