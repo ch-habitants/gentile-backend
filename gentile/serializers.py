@@ -11,5 +11,11 @@ class CantonSerializer(serializers.ModelSerializer[Canton]):
 class CommuneSerializer(serializers.ModelSerializer[Commune]):
     class Meta:
         model = Commune
-        fields = ['name_fr', 'canton', 'gentile_fr']
+        fields = [
+            'name_fr',
+            'canton',
+            'gentile_fr',
+            'searchable_name',
+            'searchable_gentile'
+        ]
         depth = 1
