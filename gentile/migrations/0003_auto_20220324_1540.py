@@ -54,7 +54,7 @@ def seed_from_data(apps, schema_editor):
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('gentile', '0001_initial'),
+        ('gentile', '0002_commune_searchable_gentile_commune_searchable_name'),
     ]
 
     operations = [
